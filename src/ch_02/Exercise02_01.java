@@ -16,5 +16,5 @@ public class Exercise02_01 {
 
     public static void convertCelsiusToFahrenheit(double celsius){
         System.out.println(celsius + " Celsius is " + ((1.8 * celsius)+32) + " Fahrenheit" );
-    };
+    }
 }
