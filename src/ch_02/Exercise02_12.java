@@ -23,6 +23,5 @@ public class Exercise02_12 {
 
         System.out.printf("The minimum runway length for this airplane is %.3f",
                 (Math.pow(input.nextDouble(),2)/(2 * input.nextDouble()) ));
-
     }
 }
