@@ -47,5 +47,7 @@ public class Exercise02_22 {
         System.out.println(" " + numberOfDimes + " dimes");
         System.out.println(" " + numberOfNickles + " nickels");
         System.out.println(" " + numberOfPennies + " pennies");
+
+        input.close();
     }
 }

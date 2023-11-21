@@ -23,5 +23,7 @@ public class Exercise02_20 {
         double annualInterestRate = input.nextDouble();
 
         System.out.printf("The interest is %.2f ", balance * (annualInterestRate/1200));
+
+        input.close();
     }
 }

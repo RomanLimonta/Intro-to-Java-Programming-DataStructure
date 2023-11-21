@@ -33,5 +33,7 @@ public class Exercise02_21 {
 
         System.out.printf("Future value is %.2f",
                 investmentAmount * (Math.pow(1 + monthlyInterestRate, numberOfYears * 12)));
+
+        input.close();
     }
 }
