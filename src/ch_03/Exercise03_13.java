@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class Exercise03_13 {
 
+    /*
+    * (Financial application: compute taxes) Listing 3.5, ComputeTax.java, give the source code to compute taxes for
+    * single filers. Complete this program to compute taxes for all filing statuses.
+    */
+
     public static void main(String[] args) {
         // Create a Scanner
         Scanner input = new Scanner(System.in);
