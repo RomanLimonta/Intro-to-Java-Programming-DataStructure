@@ -27,8 +27,12 @@ public class Exercise03_09 {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter the first 9 digits of an ISBN as an integer: ");
+        int userInput = input.nextInt();
 
+        int d1, d2, d3, d4, d5, d6, d7, d8, d9;
+        for (int i = 0; i<10;i++){
 
+        }
         //NEED TO FIGURE THIS OUT!
 
         input.close();
