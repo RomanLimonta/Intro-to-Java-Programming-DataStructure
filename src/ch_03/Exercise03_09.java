@@ -21,20 +21,45 @@ public class Exercise03_09 {
 
     Enter the first 9 digits of an ISBN as Integer: 0013031997
     The ISBN-10 number is 0013031997X
+
+    Enter the first 9 digits of an ISBN as integer: 434539934
+    The ISBN-10 number is 4345399343
     * */
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
+        Scanner userInput = new Scanner(System.in);
         System.out.println("Enter the first 9 digits of an ISBN as an integer: ");
-        int userInput = input.nextInt();
+       String ISBNNumber = userInput.next();
 
-        int d1, d2, d3, d4, d5, d6, d7, d8, d9;
-        for (int i = 0; i<10;i++){
+        int[] digits = new int[9];
+        try{
+            for (int i = 0; i<=8; i++) {
+                digits[i] = Character.getNumericValue(ISBNNumber.charAt(i));
+            }
 
+            int d1, d2, d3, d4, d5, d6, d7, d8, d9, d10;
+            d1 = digits[0];
+            d2 = digits[1];
+            d3 = digits[2];
+            d4 = digits[3];
+            d5 = digits[4];
+            d6 = digits[5];
+            d7 = digits[6];
+            d8 = digits[7];
+            d9 = digits[8];
+
+            d10 = ((d1) + (d2 * 2) + (d3 * 3) + (d4 * 4) + (d5 * 5) + (d6 * 6) + (d7 * 7) + (d8 * 8) + (d9 * 9)) %11;
+
+
+            if (d10 == 10 || ISBNNumber.length()>9){
+                System.out.println("The ISBN-10 number is " + ISBNNumber + "X");
+            } else {
+                System.out.println("The ISBN-10 number is " + ISBNNumber + d10);
+            }
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("The ISBN-10 number is " + ISBNNumber + "X");
         }
-        //NEED TO FIGURE THIS OUT!
 
-        input.close();
     }
 }
