@@ -42,7 +42,7 @@ public class Exercise03_18 {
             }
         }
 
-    }//end of main
+    }//end of main method
 
 
 }//end of Exercise03_18 class
