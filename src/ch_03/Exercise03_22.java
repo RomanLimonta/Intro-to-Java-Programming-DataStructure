@@ -1,5 +1,7 @@
 package ch_03;
 
+import java.util.Scanner;
+
 public class Exercise03_22 {
 
     /*
@@ -18,5 +20,19 @@ public class Exercise03_22 {
      */
     public static void main(String[] args) {
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("""
+                A circle is centered at (0, 0) with radius 10.
+                Enter one point (x y) seperated by a space.
+                The program will determine if the point is within the circle: (e.g. 5 8)""");
+        double x = input.nextDouble();
+        double y = input.nextDouble();
+
+        double pointsDistanceFromCenter = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+        if(pointsDistanceFromCenter <= 10){
+            System.out.println("Point (" + x + ", " + y + ") is in the circle");
+        } else {
+            System.out.println("Point (" + x + ", " + y + ") is not in the circle");
+        }
     }
 }
