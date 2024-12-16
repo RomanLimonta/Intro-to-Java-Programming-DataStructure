@@ -71,7 +71,7 @@ public class Exercise03_21 {
         };
 
 
-        System.out.print("Enter Day of the week: " + dayofTheweek);
+        System.out.print("The Day of the Week is " + dayofTheweek);
     }
 
 }
