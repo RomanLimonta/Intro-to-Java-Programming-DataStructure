@@ -12,5 +12,13 @@ public class Exercise03_24 {
 
     public static void main(String[] args) {
 
+        String[] cardRank = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+        String [] cardSuit = {"Clubs", "Diamonds", "Hearts", "Spades"};
+
+        //int card = (int)(Math.random() * 52);
+
+        System.out.println("The card you picked is " + cardRank[(int) (Math.random() * 13)]
+                + " of " + cardSuit[(int) (Math.random() * 4)] + ".");
+
     }
 }
