@@ -1,4 +1,4 @@
-package ch_02;
+package ch_03;
 
 /*
 * (Financials: currency exchange) Write a program that prompts the user to enter the exchange rate from currency in
