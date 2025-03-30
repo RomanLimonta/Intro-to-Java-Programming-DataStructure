@@ -50,6 +50,5 @@ public class Exercise03_32 {
             System.out.println("p2 is on the right side of the line");
         }
 
-
     }
 }

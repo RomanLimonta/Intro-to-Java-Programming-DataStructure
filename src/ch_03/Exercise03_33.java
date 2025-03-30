@@ -13,7 +13,7 @@ import java.util.Scanner;
 * Package 2 has a better price
 *
 * Enter weight and price for package 1: 50 25
-* Enter weight and price for package 2: 25 12.80
+* Enter weight and price for package 2: 25 12.50
 * Two packages have the same price
 **/
 public class Exercise03_33 {
@@ -25,29 +25,21 @@ public class Exercise03_33 {
         System.out.println("Enter weight and price for package 1:");
         double pk1Weight = scanner.nextDouble();
         double pk1Price = scanner.nextDouble();
-        double pk1PricePerWeight = pk1Weight/pk1Price;
+        double pk1PricePerWeight = pk1Price / pk1Weight;
 
         System.out.println("Enter weight and price for package 2:");
         double pk2Weight = scanner.nextDouble();
         double pk2Price = scanner.nextDouble();
-        double pk2PricePerWeight = pk2Weight/pk2Price;
+        double pk2PricePerWeight = pk2Price / pk2Weight;
 
-        System.out.println(pk1PricePerWeight);
-        System.out.println(pk2PricePerWeight);
-
-        if(pk1PricePerWeight < pk2PricePerWeight) {
+        if (pk1PricePerWeight < pk2PricePerWeight) {
             System.out.println("Package 1 has a better price");
-        }
-        if(pk1PricePerWeight > pk2PricePerWeight) {
+        } else if (pk1PricePerWeight > pk2PricePerWeight) {
             System.out.println("Package 2 has a better price");
-        }
-        if(pk1PricePerWeight == pk2PricePerWeight) {
+        } else {
             System.out.println("Two packages have the same price");
         }
 
-
-
         scanner.close();
-
     }
 }
