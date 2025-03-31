@@ -17,7 +17,8 @@ package ch_04;
 * Here is sample run:
 *
 * Enter the length from the center to a vertex: 5.5
-* The area of the pentagon is 71.92*/
+* The area of the pentagon is 71.92
+* */
 
 import java.util.Scanner;
 
@@ -28,6 +29,11 @@ public class Exercise04_01 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the length from the center to a vertex: ");
 
+        double r = scanner.nextDouble();
+        double s = (2*r)*(Math.sin(Math.PI/5));
+        double area = (5*Math.pow(s, 2)) / (4*Math.tan(Math.PI/5));
+
+        System.out.printf("The area of the pentagon is  %.2f", area);
         scanner.close();
     }
 }
