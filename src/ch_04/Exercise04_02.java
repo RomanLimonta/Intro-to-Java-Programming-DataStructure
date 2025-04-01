@@ -1,6 +1,8 @@
 package ch_04;
 
 
+import java.util.Scanner;
+
 /*
 * (Geometry: great circles distance) The great circle distance is the distance between two points on the surface of a
 * sphere. Let (x1, y1) and (x2, y2) be the geographic latitude and longitude of two points. The great circle distance
@@ -22,5 +24,18 @@ public class Exercise04_02 {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter point 1 (latitude and longitude) in degrees: ");
+
+        double lat1 = Math.toRadians(scanner.nextDouble());
+        double lon1 = Math.toRadians(scanner.nextDouble());
+
+        System.out.println("Enter point 2 (latitude and longitude) in degrees: ");
+        double lat2 = Math.toRadians(scanner.nextDouble());
+        double lon2 = Math.toRadians(scanner.nextDouble());
+
+        double distance = 6371 * Math.acos( Math.sin(lat1) * Math.sin(lat2) + Math.cos(lat1) * Math.cos(lat2) * Math.cos(lon1 - lon2));
+        System.out.println("The distance between the two points is " + distance + " km");
+        scanner.close();
     }
 }
