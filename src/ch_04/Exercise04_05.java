@@ -17,9 +17,24 @@ package ch_04;
 * The area of the polygon is 72.69017017488385
 * */
 
+import java.util.Scanner;
+
 public class Exercise04_05 {
 
     public static void main(String[] args){
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the number of sides: ");
+        double polygonSides = scanner.nextDouble();
+
+        System.out.println("Enter the sides length: ");
+        double polygonSidesLength = scanner.nextDouble();
+
+        double polygonArea = (polygonSides * (Math.pow(polygonSidesLength, 2))) / (4 * Math.tan(Math.PI/polygonSides));
+
+        System.out.println( "The area of the polygon is " +  polygonArea);
+
+        scanner.close();
     }
 }
